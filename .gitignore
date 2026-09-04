@@ -1,0 +1,16 @@
+# dependencias
+node_modules
+
+# build
+.next
+out
+tsconfig.tsbuildinfo
+next-env.d.ts
+
+# entorno / deploy
+.env*
+.vercel
+
+# sistema
+.DS_Store
+*.log

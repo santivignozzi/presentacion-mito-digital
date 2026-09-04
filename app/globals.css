@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dossier palette — deliberately distinct from the Mito landing.
+       Warm paper + ink, one accent, hairline rules. No glass, no gradients. */
+    --paper: #f4f1ea;
+    --paper-2: #ebe6db;
+    --paper-3: #e2dccf;
+    --ink: #15181b;
+    --ink-2: #3d4348;
+    --ink-3: #6e767c;
+    --rule: rgba(21, 24, 27, 0.16);
+    --rule-soft: rgba(21, 24, 27, 0.08);
+
+    --accent: #f2461d;
+    --deep: #052941;
+    --highlight: #ffc401;
+
+    --radius: 0.25rem;
+  }
+
+  * {
+    border-color: var(--rule-soft);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--highlight);
+    color: var(--ink);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Uppercase mono label used for section markers and metadata.
+     Arranca en 11px porque 10px en pantalla de celular queda ilegible;
+     desde sm vuelve a los 10px del diseño original. */
+  .label {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  @media (min-width: 640px) {
+    .label {
+      font-size: 10px;
+    }
+  }
+
+  /* Editorial serif display */
+  .display {
+    font-family: var(--font-display), Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    line-height: 1.02;
+  }
+
+  /* Hairline rules — the main structural device of this deck */
+  .rule-t {
+    border-top: 1px solid var(--rule);
+  }
+  .rule-b {
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .num-tag {
+    font-variant-numeric: tabular-nums;
+    font-family: var(--font-mono), ui-monospace, monospace;
+  }
+
+  /* Ink-marker highlight behind the rotating word */
+  .ink-underline {
+    background-image: linear-gradient(transparent 62%, var(--highlight) 62%, var(--highlight) 94%, transparent 94%);
+  }
+
+  /* Softens the ends of the clients marquee so logos don't cut abruptly */
+  .fade-edges {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  }
+
+  /* Inverted block: the emphasis device instead of glow/glass */
+  .invert-block {
+    background: var(--deep);
+    color: #f4f1ea;
+  }
+  .invert-block ::selection {
+    background: var(--highlight);
+    color: var(--deep);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
