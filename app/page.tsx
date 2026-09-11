@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/ui/hero-section-1";
 import { ClientsMarquee } from "@/components/sections/clients-marquee";
 import { ProblemaSection } from "@/components/sections/problema-section";
+import { PromesaSection } from "@/components/sections/promesa-section";
 import { PropuestaSection } from "@/components/sections/propuesta-section";
 import { SistemaSection } from "@/components/sections/sistema-section";
 import { LoopSection } from "@/components/sections/loop-section";
@@ -15,6 +16,7 @@ export default function Page() {
       <HeroSection />
       <ClientsMarquee />
       <ProblemaSection />
+      <PromesaSection />
       <PropuestaSection />
       <SistemaSection />
       <LoopSection />

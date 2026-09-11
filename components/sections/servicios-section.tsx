@@ -37,37 +37,6 @@ function PanelFooter({
   );
 }
 
-function PanelLinkedIn() {
-  const rows = [
-    ["Cargo", "Director · Gerente · Jefe de área"],
-    ["Industria", "Tecnología, salud, retail, servicios"],
-    ["Tamaño", "200 — 5.000 empleados"],
-    ["Geografía", "AMBA + principales ciudades"],
-    ["Formato", "Message Ads · Lead Gen Form"],
-  ];
-
-  return (
-    <div className="flex h-full flex-col justify-between p-7 md:p-10">
-      <div>
-        <p className="label text-ink-3">Especificación de audiencia</p>
-        <div className="mt-7">
-          {rows.map(([k, v]) => (
-            <div
-              key={k}
-              className="grid grid-cols-3 gap-4 border-b border-rule/40 py-3 first:border-t"
-            >
-              <span className="label pt-1 text-ink-3">{k}</span>
-              <span className="col-span-2 text-sm text-ink md:text-base">{v}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <PanelFooter label="Audiencia estimada" value="42.800" tag="Capa premium" />
-    </div>
-  );
-}
-
 function PanelLanding() {
   return (
     <div className="flex h-full flex-col p-7 md:p-10">
@@ -135,7 +104,7 @@ function PanelHerramientas() {
   );
 }
 
-const panels = [<PanelLinkedIn key="li" />, <PanelLanding key="lp" />, <PanelHerramientas key="ia" />];
+const panels = [<PanelLanding key="lp" />, <PanelHerramientas key="ia" />];
 
 const items: VerticalTabItem[] = serviciosExtra.items.map((item, i) => ({
   id: String(i + 1).padStart(2, "0"),
@@ -156,6 +125,10 @@ export function ServiciosSection() {
         heading={serviciosExtra.title}
         items={items}
       />
+
+      <div className="rule-t mt-16 pt-6 md:mt-20">
+        <p className="max-w-3xl text-sm leading-relaxed text-ink-3">{serviciosExtra.nota}</p>
+      </div>
     </section>
   );
 }

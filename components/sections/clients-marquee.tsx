@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { clients } from "@/data/presentacion";
+import { clients, clientsLabel } from "@/data/presentacion";
 
 const SPEED = 0.045; // px por milisegundo
 
@@ -75,7 +75,7 @@ export function ClientsMarquee() {
   return (
     <section id="clientes" className="overflow-hidden py-16 md:py-20">
       <div className="mx-auto mb-8 max-w-[1360px] px-6">
-        <p className="label rule-b pb-4 text-ink-3">Marcas que ya trabajaron con Mito</p>
+        <p className="label rule-b pb-4 text-ink-3">{clientsLabel}</p>
       </div>
 
       <div

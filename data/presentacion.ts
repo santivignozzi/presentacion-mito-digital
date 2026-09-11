@@ -12,9 +12,9 @@ export const hero = {
 
 export const problema = {
   eyebrow: "01 · El punto de partida",
-  title: "El problema no es la falta de leads. Es la falta de sistema.",
+  title: "Tu equipo comercial abre la semana sin saber a quién llamar.",
   intro:
-    "La mayoría de las empresas B2B ya invierten en captación. Lo que falta es el hilo que une la campaña con la conversación de ventas.",
+    "No es falta de leads, es falta de sistema. La mayoría de las empresas B2B ya invierten en captación: lo que falta es el hilo que une la campaña con la conversación de ventas.",
   items: [
     {
       code: "A",
@@ -43,8 +43,34 @@ export const problema = {
   ],
 };
 
+export const promesa = {
+  eyebrow: "02 · La promesa",
+  title: "Qué te llevás, y en cuánto tiempo",
+  intro:
+    "Un proceso bien explicado no es una oferta. Esto es lo que nos comprometemos a entregar, con fecha.",
+  claim:
+    "Un flujo constante de reuniones con el decisor que definimos juntos, en 90 días, a un costo por reunión que se mide y baja mes a mes.",
+  items: [
+    {
+      range: "A los 30 días",
+      title: "La primera entrega concreta",
+      body: "Perfil de cliente ideal documentado, base existente depurada y segmentada, y la primera secuencia al aire. El primer mes no se siente vacío.",
+    },
+    {
+      range: "A los 90 días",
+      title: "El sistema calibrado",
+      body: "Campañas, públicos y secuencias ajustados con datos propios de tu cuenta, y el costo por reunión consolidado en el tablero.",
+    },
+    {
+      range: "Si no llegamos",
+      title: "Seguimos sin cobrar el fee",
+      body: "El piso de reuniones se acuerda antes de empezar, a partir de tus números. Si no llegamos en el plazo, seguimos trabajando sin cobrar el fee mensual hasta llegar.",
+    },
+  ],
+};
+
 export const propuesta = {
-  eyebrow: "02 · La propuesta",
+  eyebrow: "03 · La propuesta",
   title: "Prospección integral",
   claim: "Meta Ads + Email Marketing",
   body: "Un mismo equipo diseña la captación y la conversación. Los datos de la campaña alimentan la segmentación del email, y las respuestas del email vuelven a la campaña como público de retargeting. Ese loop es el producto.",
@@ -85,7 +111,7 @@ export const propuesta = {
 };
 
 export const sistema = {
-  eyebrow: "03 · El sistema",
+  eyebrow: "04 · El sistema",
   title: "Cómo funciona, paso a paso",
   intro:
     "Un circuito de cinco etapas que corre todos los meses. Cada etapa alimenta a la siguiente y devuelve información a la anterior.",
@@ -129,7 +155,7 @@ export const sistema = {
 };
 
 export const loop = {
-  eyebrow: "04 · Por qué juntos",
+  eyebrow: "05 · Por qué juntos",
   title: "Separados son dos canales. Juntos son un embudo.",
   cards: [
     {
@@ -152,10 +178,10 @@ export const loop = {
 };
 
 export const metricas = {
-  eyebrow: "05 · Qué medimos",
+  eyebrow: "06 · Qué medimos",
   title: "Reportamos lo que decide, no lo que decora",
   intro:
-    "Nada de reportes de alcance e impresiones. Un tablero mensual con los números que le importan al área comercial.",
+    "Nada de reportes de alcance e impresiones. Un tablero con los números que le importan al área comercial, disponible siempre y no una vez por mes.",
   items: [
     { label: "Costo por lead", detail: "Cuánto sale traer un contacto nuevo desde Meta Ads." },
     { label: "Leads calificados", detail: "Cuántos de esos contactos cumplen el perfil de cliente ideal." },
@@ -167,7 +193,7 @@ export const metricas = {
 };
 
 export const cronograma = {
-  eyebrow: "06 · Implementación",
+  eyebrow: "07 · Implementación",
   title: "Los primeros 90 días",
   phases: [
     {
@@ -204,18 +230,12 @@ export const cronograma = {
 };
 
 export const serviciosExtra = {
-  eyebrow: "07 · Además",
+  eyebrow: "08 · Además",
   title: "Lo que sumamos alrededor del sistema",
   intro:
-    "La prospección es el núcleo. Estos servicios existen para sostenerla o para resolver necesidades puntuales del equipo.",
+    "Meta Ads y email marketing son el núcleo y se venden juntos. Estos servicios existen para sostener ese circuito o para resolver necesidades puntuales del equipo, y se presupuestan aparte.",
+  nota: "Sobre LinkedIn: es una posibilidad que evaluamos más adelante, recién cuando el sistema esté corriendo y con números propios. No forma parte de esta propuesta y se cotiza por separado.",
   items: [
-    {
-      title: "LinkedIn Ads",
-      description:
-        "Cuando el ICP es muy específico por cargo, industria o tamaño de empresa, LinkedIn complementa a Meta con un targeting más quirúrgico.",
-      bullets: ["Segmentación por cargo y empresa", "Message Ads y Lead Gen Forms", "Capa premium sobre la prospección base"],
-      accent: "purple" as const,
-    },
     {
       title: "Landing pages",
       description:
@@ -234,12 +254,15 @@ export const serviciosExtra = {
 };
 
 export const cierre = {
-  eyebrow: "08 · Siguiente paso",
+  eyebrow: "09 · Siguiente paso",
   title: "Empecemos por entender a quién querés llegar",
   body: "Una reunión de diagnóstico donde definimos el ICP, revisamos la base que ya tenés y estimamos el costo por reunión realista para tu industria.",
   email: "producciones@mitomkt.com",
   whatsapp: "https://wa.me/5491178870751",
 };
+
+export const clientsLabel =
+  "Marcas que confiaron en Mito en producción y eventos. Ahora ese mismo equipo genera sus reuniones.";
 
 export const clients: { name: string; src?: string }[] = [
   { name: "Red Hat", src: "/logos/clientes/red-hat.svg" },
@@ -258,6 +281,7 @@ export const clients: { name: string; src?: string }[] = [
 
 export const navItems = [
   { name: "El problema", href: "#problema" },
+  { name: "La promesa", href: "#promesa" },
   { name: "La propuesta", href: "#propuesta" },
   { name: "El sistema", href: "#sistema" },
   { name: "Métricas", href: "#metricas" },
